@@ -1,0 +1,261 @@
+:root {
+  --font: #606164;
+  --sky-red: #e30609;
+  --bg-header: #f1f2fa;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a:hover {
+  color: var(--sky-red);
+}
+
+.navbar {
+  padding: 0 22px;
+  display: flex;
+  background-color: var(--bg-header);
+  height: 70px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+header .submenu {
+  display: flex;
+  align-items: center;
+  height: 70px;
+  background-color: white;
+  justify-content: center;
+}
+header .submenu button {
+  color: var(--font);
+  font-size: 1.4rem;
+  background-color: white;
+  border: 1px solid white;
+  border-bottom-width: 3px;
+  outline: none;
+  height: 95%;
+  width: 100%;
+}
+header .submenu button:hover {
+  color: var(--sky-red);
+  border-bottom-color: var(--sky-red);
+}
+
+.skyMenu {
+  height: 40px;
+  width: 88px;
+}
+header .menu {
+  position: absolute;
+  border: none;
+  background-image: url("../../assets/menu.svg");
+  background-color: transparent;
+  height: 40px;
+  margin-right: 6px;
+  right: 14px;
+  width: 40px;
+  margin-top: 8px;
+}
+.hidden {
+  display: none;
+}
+.show {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 90%;
+  padding-left: 10px;
+  background-color: white;
+}
+.show::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.show h5 {
+  margin-bottom: 10px;
+}
+.show .close {
+  background-image: url("../../assets/close.svg");
+  background-color: transparent;
+  border: none;
+  background-size: 30px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.menu-desktop,
+.footer-desktop {
+  display: none;
+}
+
+/* footer */
+.social{
+  margin-right: 10px;
+}
+.socialMedia img {
+  height: 65px;
+  width: 24px;
+  margin-right: 11px;
+}
+.socialMedia {
+  padding-left: 12px;
+  border: 1px solid var(--font);
+  border-left-color: var(--bg-header);
+  border-right-color: var(--bg-header);
+  grid-area: social;
+  display: flex;
+  justify-content: space-between;
+}
+.baixar {
+  padding-left: 12px;
+  display: flex;
+}
+.baixar h3 {
+  grid-area: baixar;
+  width: 200px;
+  color: var(--font);
+}
+.baixar img {
+  height: 60px;
+  margin-right: 20px;
+}
+.about {
+  padding-left: 12px;
+  grid-area: about;
+}
+footer .socialMedia .sky {
+  grid-area: social;
+  height: 62px;
+  width: 90px;
+}
+
+footer {
+  margin-top: 5px;
+  height: 503px;
+  width: 100vw;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 79px 89px 1fr;
+  grid-template-areas:
+    "social"
+    "baixar"
+    "about";
+  background-color: var(--bg-header);
+  gap: 8px;
+}
+.app-sky {
+  display: flex;
+}
+.about h5 {
+  margin-bottom: 12px;
+  font-size: 1em;
+  width: 186px;
+}
+.about h4 {
+  font-size: 1.17em;
+  color: var(--font);
+  margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
+  color: var(--font);
+}
+
+/* body */
+h2 {
+  margin: 20px 0px;
+  color: rgba(0, 0, 0, 0.8);
+}
+.galeria {
+  padding-left: 10px;
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+  cursor: pointer;
+  -webkit-user-drag: auto;
+}
+.galeria img {
+  width: 8rem !important;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+.galeria::-webkit-scrollbar {
+  display: none;
+}
+
+.filme {
+  width: 90%;
+  border-radius: 3px;
+  margin: 5px 5px;
+}
+
+.div-img {
+  margin-right: 10px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+}
+.div-img.slick-center img {
+  width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+  .menu {
+    display: none;
+  }
+  .menu-desktop,
+  .footer-desktop {
+    display: block;
+  }
+  .wrap {
+    display: flex;
+  }
+  .menu-desktop:first-child {
+    background-image: url("../assets/profile.svg");
+    background-color: transparent;
+    height: 30px;
+    margin-right: 35px;
+    width: 30px;
+    border: none;
+  }
+  .menu-desktop:last-child {
+    background-color: transparent;
+    height: 23px;
+    background-size: 23px;
+    margin: auto;
+    width: 23px;
+    border: none;
+    background-image: url("../assets/search.svg");
+  }
+  footer {
+    margin-top: 5px;
+    height: 503px;
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 79px 89px 1fr;
+    grid-template-areas:
+      "social social"
+      "baixar about";
+    background-color: var(--bg-header);
+    gap: 8px;
+  }
+  .footer-desktop {
+    grid-area: baixar;
+    margin-top: 18px;
+    width: 184px;
+  }
+  .baixar {
+    display: flex;
+    flex-direction: column;
+  }
+}
