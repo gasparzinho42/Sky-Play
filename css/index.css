@@ -8,6 +8,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  overflow-x: hidden;
+}
 a:hover {
   color: var(--sky-red);
 }
@@ -142,7 +145,7 @@ footer .socialMedia .sky {
 footer {
   margin-top: 5px;
   height: 503px;
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
@@ -239,18 +242,12 @@ h2 {
     background-image: url("../assets/search.svg");
   }
   footer {
-    margin-top: 5px;
-    height: 503px;
-    width: 100vw;
-    overflow: hidden;
-    display: grid;
+    height: 403px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 79px 89px 1fr;
     grid-template-areas:
       "social social"
       "baixar about";
-    background-color: var(--bg-header);
-    gap: 8px;
   }
   .footer-desktop {
     grid-area: baixar;
